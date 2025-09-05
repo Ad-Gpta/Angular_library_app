@@ -37,6 +37,11 @@
             <button mat-raised-button mat-dialog-close color="warn" [mat-dialog-close]="false"
                 type="button">Cancel</button>
             <button mat-raised-button color="primary" type="submit" [disabled]="!bookForm.valid">Save</button>
+
+            <!-- When update functionality is added
+            <button mat-raised-button color="primary" type="submit" [disabled]="!bookForm.valid">{{data ? 'Update'
+                :'Save'}}</button>
+                -->
         </p>
     </form>
 </mat-dialog-content>

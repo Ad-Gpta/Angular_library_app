@@ -18,4 +18,14 @@ export class Books {
   getAllBooks(): Observable<any> {
     return this._http.get(this.targetUrl);
   }
+
+  deleteBook(id: number): Observable<any> {
+    return this._http.delete(`${this.targetUrl}/${id}`);
+  }
+
+  /*
+  updateBook(id: number, data: any): Observable<any> {
+    return this._http.put(`${this.targetUrl}/${id}`, data);
+  }
+    */
 }
