@@ -28,7 +28,7 @@ export class AddEditBooks {
     title: new FormControl(''),
     author: new FormControl(''),
     isbn: new FormControl(''),
-    status: new FormControl(''),
+    available: new FormControl(''),
   });
 
   booksService: Books = inject(Books);

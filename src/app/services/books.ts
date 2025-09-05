@@ -14,4 +14,8 @@ export class Books {
     console.log(data);
     return this._http.post(`${this.targetUrl}/addBook`, data);
   }
+
+  getAllBooks(): Observable<any> {
+    return this._http.get(this.targetUrl);
+  }
 }

@@ -5,28 +5,29 @@
         <p>
             <mat-form-field appearance="outline">
                 <mat-label>Title</mat-label>
-                <input matInput placeholder="Enter Book title" required>
+                <!--Will not fetch user-input data without fornControlName-->
+                <input matInput placeholder="Enter Book title" required formControlName="title">
                 <mat-hint>book title</mat-hint>
             </mat-form-field>
         </p>
         <p>
             <mat-form-field appearance="outline">
                 <mat-label>Author</mat-label>
-                <input matInput placeholder="Enter Author name" required>
+                <input matInput placeholder="Enter Author name" required formControlName="author">
                 <mat-hint>Author name</mat-hint>
             </mat-form-field>
         </p>
         <p>
             <mat-form-field appearance="outline">
                 <mat-label>Isbn</mat-label>
-                <input matInput placeholder="Enter Book isbn" required>
+                <input matInput placeholder="Enter Book isbn" required formControlName="isbn">
                 <mat-hint>isbn</mat-hint>
             </mat-form-field>
         </p>
         <p>
             <mat-form-field appearance="outline">
                 <mat-label>Status</mat-label>
-                <select matNativeControl required>
+                <select matNativeControl required formControlName="available">
                     <option value="true">Available</option>
                     <option value="false">Not Available</option>
                 </select>
