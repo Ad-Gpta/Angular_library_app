@@ -1,1 +1,38 @@
-<p>add-edit-books works!</p>
+<h2 mat-dialog-title>Add Book</h2>
+<mat-dialog-content class="mat-typography">
+    <br>
+    <p>
+        <mat-form-field appearance="outline">
+            <mat-label>Title</mat-label>
+            <input matInput placeholder="Enter Book title" required>
+            <mat-hint>book title</mat-hint>
+        </mat-form-field>
+    </p>
+    <p>
+        <mat-form-field appearance="outline">
+            <mat-label>Author</mat-label>
+            <input matInput placeholder="Enter Author name" required>
+            <mat-hint>Author name</mat-hint>
+        </mat-form-field>
+    </p>
+    <p>
+        <mat-form-field appearance="outline">
+            <mat-label>Isbn</mat-label>
+            <input matInput placeholder="Enter Book isbn" required>
+            <mat-hint>isbn</mat-hint>
+        </mat-form-field>
+    </p>
+    <p>
+        <mat-form-field appearance="outline">
+            <mat-label>Status</mat-label>
+            <select matNativeControl required>
+                <option value="true">Available</option>
+                <option value="false">Not Available</option>
+            </select>
+        </mat-form-field>
+    </p>
+</mat-dialog-content>
+<mat-dialog-actions align="end">
+    <button matButton mat-dialog-close>Cancel</button>
+    <button matButton [mat-dialog-close]="true" cdkFocusInitial>Add</button>
+</mat-dialog-actions>

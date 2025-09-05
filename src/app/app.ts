@@ -5,6 +5,7 @@ import { MatDialog } from '@angular/material/dialog';
 import { MatIconModule } from '@angular/material/icon';
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 import { MatToolbarModule } from '@angular/material/toolbar';
+import { AddEditBooks } from './add-edit-books/add-edit-books';
 
 @Component({
   selector: 'app-root',
@@ -14,4 +15,8 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 })
 export class App {
   protected readonly title = signal('library_app');
+  readonly dialog = inject(MatDialog);
+  openAddEditBookForm() {
+    this.dialog.open(AddEditBooks);
+  }
 }
